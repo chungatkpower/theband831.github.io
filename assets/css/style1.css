@@ -1,0 +1,587 @@
+/* Reset CSS */
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box; 
+}
+
+
+html{
+    font-family: "Segoe UI",Arial,sans-serif;
+}
+
+.clearfloat{
+    clear: both;  
+}
+.text-white{
+    color: white!important;
+}
+
+/*
+1. Từ ngoài vào trong
+2. Từ trên xuống dưới
+3. Tổng quan đến chi tiết
+*/
+
+/*
+1. Vị trí
+2. Kích thước (width, height)
+3. Màu sắc
+4. Kiểu dáng
+*/
+#main{
+    position: relative;
+
+}
+/* Phần Header */
+#header{
+    height: 46px;
+    background-color: black;
+    position:fixed;
+    top:0;
+    left:0;
+    right: 0;
+    z-index: 1;
+}
+
+#nav {
+    display: inline-block;
+}
+
+#nav > li {
+    display: inline-block;
+    position:relative;
+}
+
+#nav, .subnav  {
+    list-style-type: none;
+
+
+}
+/* Psuedo class :hover */
+#nav .subnav li:hover a,
+#nav > li:hover > a {
+    color: #000!important;
+    background-color: #ccc!important;
+}
+#nav li:hover .subnav{
+    display: block;
+}
+
+#nav > li > a {
+    color: white;
+    text-transform: uppercase; 
+}
+
+#nav li a{
+    display:block;
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0px 24px;
+}
+
+#nav .subnav {
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    background-color: white;
+    box-shadow:0 0 10px rgba(0,0,0,0.3);
+    min-width: 160px;
+}
+
+#nav .subnav a{
+    color: black;
+    padding: 0 12px;
+    line-height: 38px;
+} 
+
+#nav .nav-arrow-down{
+    font-size: 12px;
+}
+
+#header .search-btn {
+    float:right;
+    color:white;
+    font-size:16px;
+    line-height: 46.5px;
+    padding:0px 21px;
+    cursor:pointer;
+    
+}
+
+#header .search-btn:hover {
+    background-color: red;
+}
+
+/* Phần Slider */
+#slider{
+    position:relative;
+    margin-top:46.5px;
+    padding-top: 50%;
+    background: url('/assets/img/Slider/pexels-antoni-shkraba-production-8041087.jpg') no-repeat top center;
+    background-size: cover;
+    
+}
+
+#text-slider {
+    position:absolute;
+    bottom:15%;
+    width:100%;
+    color: white;
+    
+}
+#htext-slider {
+    text-align:center;
+    font-size: 60px;
+    padding:30px 0px;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+#ptext-slider {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 8px;
+    text-shadow: rgba(0,0,0,0.3) 0.1em 0.1em 0.2em;
+}
+
+#content{
+    
+}
+
+#about{
+    padding: 64px 0px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.about-text{
+    width: 800px;
+    text-align: center;
+    margin: 0px auto;
+    
+}
+.about-text .text-header{
+    letter-spacing: 4px;
+    font-weight: 500;
+    margin: 10px 0;
+    text-transform: uppercase;
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.about-text .text-sub-header{
+    font-style: italic;
+    font-size: 15px;
+    line-height: 1.5;
+    opacity: 0.6;
+    margin: 15px 0px;
+}
+
+.about-text .noidung {
+    text-align: justify;
+    font-size: 15px;
+    line-height: 1.4;
+    margin: 15px;
+    font-family: "Lato", sans-serif;
+}
+
+#about-name{
+    padding-top: 32px;
+    padding-bottom: 312px;
+}
+
+#about-name img{
+    width: 62%;
+    height: 222px;
+    border-radius: 4px;
+    background-size:cover;
+    margin-top:21px;
+    transition: all 0.3s ease-in-out;
+    box-shadow:0 0 10px rgba(0,0,0,0.3);
+    
+}
+
+#about-name .people:hover img {
+    transform: scale(110%);
+    box-shadow:5px 10px 10px rgba(0,0,0,0.3);
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+#about-name .people:hover .name {
+    font-size: 17px;
+    opacity: 0.9;
+}
+
+#about-name .people{
+    width: 33.33333%;
+    display:block;
+    float: left;
+   
+}
+
+.name h4{
+    margin:15px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+
+
+#tour{
+   
+    background-color: black;
+   
+
+}
+#tour #sub-tour{
+ 
+    max-width:800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top:64px;
+    padding-bottom:64px;
+ 
+}
+
+.tickit-list {
+    background-color: #fff;
+    color:#757575;
+    border: 1px solid #ccc;
+    list-style-type: none;
+}
+
+.tickit-list li {
+    border-bottom: 1px solid #ddd;
+    padding:8px 16px;
+    font-size: 15px;
+    line-height: 1.5;
+    left: 4px;
+    display:list-item;
+    text-align: left;
+
+}
+
+.tickit-list .sold-out{
+    margin-left: 16px;
+    color: #fff!important;
+    background-color: #f44336!important;
+    display: inline-block;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+    line-height: 22px;
+
+}
+
+.tickit-list .quantity{
+    float: right;
+    border-radius: 50%;
+    margin-right: 16px;
+    background-color: #000;
+    color: white;
+    padding:5px 10px;
+    line-height: 16px;
+}
+
+#phan2{
+    
+    width: 800px;
+    margin: 0px auto;
+    padding:32px 8px;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.text-header.text-white{
+    text-align: center;
+    letter-spacing: 4px;
+    font-weight: 400;
+    margin: 10px 0;
+    font-size: 30px;
+    color: #fff;
+}
+
+.text-sub-header.text-white {
+    color: #fff;
+    margin:15px 0px;
+    text-align: center;
+    opacity: 0.6;
+}
+
+.place{
+    width: 33%;
+    background-color: white;
+    height: 400px;
+    margin: 0px -8px;
+    color: #000;
+
+}
+
+.place-sub{
+    padding: 0px 16px;
+}
+
+.place-header{
+    margin: 15px 0px;
+
+}
+
+.place-p1{
+    opacity: 0.6;
+    margin: 15px 0px;
+}
+
+.place-p2{
+    margin: 15px 0px;
+}
+
+.place-buy{
+    margin-bottom: 16px;
+    text-decoration: none;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    background-color: #000;
+    color: white;
+    transition: all 0.1s ease-in-out;
+
+}
+
+.place img {
+    transition: all 0.1s ease-in-out;
+    height: 183px;
+    width: 245px;
+    
+
+}
+
+.place img:hover {
+    opacity: 0.8;
+}
+
+.place-buy:hover{
+    background-color: #ccc;
+    color: black;
+}
+
+
+.modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.open{
+    display: flex;
+}
+
+.modal-container{
+    background-color: white;
+    width: 900px;
+    min-height:200px;
+    position: relative;
+    animation: modalFadeIn ease 0.5s;
+}
+
+.modal-close{
+    position: absolute;
+    right: 0;
+    top:0;
+    padding:8px 16px;
+    display: inline-block;
+    color: white;
+    z-index: 1;
+    
+}
+
+.modal-close:hover {
+    background-color: #f44336;
+}
+
+.modal-header{
+    
+    width:900px ;
+    height:129px ;
+    background-color: #009688;
+    color: white;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.modal-label{
+    display: block;
+    margin: 15px 0px 15px 22px;
+
+}
+
+.modal-input{
+    width: 93%;
+    height: 42px;
+    margin: 0px 28px;
+    border: 1px solid #ccc;
+    padding: 8px;
+    font-size: 15px;
+
+}
+
+#pay{
+    text-align: center;
+    background-color: #009688;
+    color:white;
+    margin: 15px 35px 15px 27px;
+    padding:16px 0px;
+    transition: all 0.2s ease-in-out;
+    cursor:pointer;
+    
+}
+
+#modal-footer{
+    text-align: right;
+    margin: 15px 33px;
+}
+
+.modal-header p {
+    padding:13px;
+    
+}
+
+#pay:hover{
+    opacity: 0.8;
+
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-140px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#contact {
+    padding:64px 0px;
+    width: 800px;
+    margin: 0 auto;
+}
+.contact1 {
+
+}
+.contact1 .contact11{
+    text-align: center;
+    letter-spacing: 4px;
+    font-weight: 400;
+    margin: 10px 0;
+    font-size: 30px;
+
+}
+.contact1 .contact12 {
+    margin:15px 0px;
+    text-align: center;
+    opacity: 0.6;
+}
+
+.contact2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:32px 0px;
+}
+
+.contact21 {
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.contact21 p i {
+    width: 30px;
+    display: inline-block;
+}
+
+.contact22 {
+    
+}
+.contact22 input {
+    border: 1px solid #ccc;
+    padding:10px;
+}
+
+input.send{
+    color: white;
+    background-color: #000;
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 15px;
+    margin:16px 0px;
+}
+
+input.send:hover {
+    color: black;
+    background-color: #ccc;
+    cursor:pointer;
+}
+
+.message {
+    display: block;
+    width: 100%;
+    border: 1px solid #ccc;
+}
+.send {
+    display: block;
+    border: 1px solid #ccc;
+}
+input .name{
+    border: 1px solid #ccc;
+}
+.email{
+    border: 1px solid #ccc;
+}
+
+#footer {
+    color: #000;
+    background-color: #f1f1f1;
+    padding:64px 0px;
+    text-align: center;
+    font-size: 15px;
+    opacity: 0.6;
+}
+
+.footer-icon {
+    display: inline-block;
+    color: #000;
+}
+
+.footer-icon a {
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    
+}
+
+
+#footer p {
+    margin: 25px;
+    display: block;
+    letter-spacing: 3px;
+}
